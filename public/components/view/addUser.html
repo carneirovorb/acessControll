@@ -1,0 +1,78 @@
+<ul class="collection with-header">
+    <li class="collection-header">
+        <h4 class="center">Cadastrar novo usuário</h4>
+    </li>
+<br><br>
+
+<div class="row form-add-user">
+    <form class="col s12">
+
+        <div class="row">
+             
+            <div class="input-field col s12 m7">
+                <i class="material-icons prefix">account_circle</i>
+                <input ng-model="nome"  type="text" class="validate">
+                <label for="">Nome</label>
+               
+            </div>
+            <div class="input-field col s12 m5">
+                <i class="material-icons prefix">phone</i>
+                <input ng-model="telefone" id="" type="tel" class="validate">
+                <label for="">Telefone</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m5">
+                <i class="material-icons prefix">code</i>
+                <input ng-model="tag" id="" type="text" class="validate">
+                <label for="">Tag RFID</label>
+            </div>
+            <div class="input-field col s12 m7">
+                <i class="material-icons prefix">email</i>
+                <input ng-model="email"id="" type="tel" class="validate">
+                <label for="">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <i class="material-icons prefix">perm_identity</i>
+                <input id="" ng-model="orientador" type="text" class="validate">
+                <label for="">Orientador</label>
+            </div>
+            <div class="input-field col s12 m4">
+                <i class="material-icons prefix">today</i>
+                <input ng-model="data" type="date" label="" id="" class="datepicker" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                 <div class="switch">
+                    <label>
+                        Entrada liberada<br>
+                    Não
+                    <input ng-model="entradaPermitida" type="checkbox" checked>
+                    <span class="lever"></span>
+                    Sim
+                    </label>
+                </div>
+            </div>
+
+        </div>
+        <br> <br> <br>
+        <div class="row">
+            <div class="left input-field col s6">
+                <a href="/" class="waves-effect waves-light btn grey lighten-1"><i class="material-icons left">delete</i>Descartar</a>
+            </div>
+            <div class=" center input-field col s6">
+            <button ng-click="cadastrarUsuario(nome, telefone, tag, email, orientador, data, entradaPermitida)" class="btn waves-effect waves-light right" type="submit" name="action">Cadastrar
+                <i class="material-icons right">done</i>
+            </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</ul>
+

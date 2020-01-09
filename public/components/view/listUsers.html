@@ -1,0 +1,40 @@
+<ul class="collection with-header">
+    <li class="collection-header">
+        <h4 class="center">Usuários Cadastrados</h4>
+    </li>
+    <!--
+    <li ng-repeat="user in users" class="waves-effect z-depth-1 collection-item">
+       <div><i class="material-icons">perm_identity</i>{{user.nome}}</div></a>
+        <a class="secondary-content waves-effect waves-light btn-flat"><i class="material-icons left">mode_edit</i>editar</a>
+    </li>-->
+</ul>
+
+<ul class="collapsible popout" data-collapsible="accordion">
+
+    <li class="collapsible-user z-depth-2" ng-repeat="user in users">
+        <div class="waves-effect collapsible-header"><i class="material-icons">perm_identity</i>{{user.nome}}
+            <a href="/#!/editarUsuario/{{user._id}}" class="secondary-content waves-effect btn-flat">editar</a></div>
+        <div class="collapsible-body">
+
+
+            <table class="striped">
+                <tbody>
+                    <tr>
+                        <td>Telefone: <span class="descri">{{user.telefone}} </span></td>
+                        <td>Email: <span class="descri">{{user.email}} </span></td>
+                    </tr>
+                    <tr>
+                        <td>TAG: <span class="descri">{{user.tag}} </span></td>
+                        <td> Orientador: <span class="descri">{{user.orientador}} </span></td>
+                    </tr>
+                    <tr>
+                        <td> Período: <span class="descri">{{user.periodo | date: 'dd/MM/yyyy'}} </span></td>
+                        <td>Acesso:<span class="descri">{{user.acessoPermitido}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </li>
+</ul>

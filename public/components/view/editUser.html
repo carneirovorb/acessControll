@@ -1,0 +1,82 @@
+<ul class="collection with-header">
+    <li class="collection-header">
+        <h4 class="center">Editar {{user.nome}}</h4>
+    </li>
+<br><br>
+
+<div class="row form-add-user">
+    <form class="col s12">
+
+        <div class="row">
+             
+            <div class="input-field col s12 m7">
+                <i class="material-icons prefix">account_circle</i>
+                <input value="user.nome" ng-model="user.nome"  type="text" class="validate">
+                <label class="active" class="active" for="">Nome</label>
+               
+            </div>
+            <div class="input-field col s12 m5">
+                <i class="material-icons prefix">phone</i>
+                <input ng-model="user.telefone" id="" type="tel" class="validate">
+                <label class="active" for="">Telefone</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m5">
+                <i class="material-icons prefix">code</i>
+                <input ng-model="user.tag" id="" type="text" class="validate">
+                <label class="active" for="">Tag RFID</label>
+            </div>
+            <div class="input-field col s12 m7">
+                <i class="material-icons prefix">email</i>
+                <input ng-model="user.email"id="" type="tel" class="validate">
+                <label class="active" for="">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <i class="material-icons prefix">perm_identity</i>
+                <input id="" ng-model="user.orientador" type="text" class="validate">
+                <label class="active" for="">Orientador</label>
+            </div>
+            <div class="input-field col s12 m4">
+                <i class="material-icons prefix">today</i>
+                <input ng-model="user.data" type="date" label="" id="" class="datepicker" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                 <div class="switch">
+                    <label>
+                        Entrada liberada<br>
+                    Não
+                    <input value="true" ng-model="user.entradaPermitida" type="checkbox" checked>
+                    <span class="lever"></span>
+                    Sim
+                    </label>
+                </div>
+            </div>
+
+        </div>
+        <br> <br> <br>
+        <div class="row">
+            <div class="left input-field col s4">
+                <a href="/" class="waves-effect waves-light btn grey lighten-1"><i class="material-icons left">clear_all</i>Descartar</a>
+               
+            </div>
+            <div class=" right input-field col s6">
+            <button ng-click="editarUsuario(user._id, user.nome, user.telefone, user.tag, user.email, user.orientador, user.data, user.entradaPermitida)" class="btn green waves-effect waves-light right" type="submit" name="action">Cadastrar
+                <i class="material-icons right">done</i>
+            </button>
+            </div>
+        </div>
+        <div class="row">
+             <a href="/" ng-click="removerUsuario(user._id, user.nome)" class="waves-effect waves-light btn red lighten-1"><i class="material-icons left">delete</i>Remover Usuário</a>
+        </div>
+
+    </form>
+</div>
+
+</ul>
+

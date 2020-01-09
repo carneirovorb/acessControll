@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="public/style/style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="bg-solid">
+    </div>
+
+    <ul id='menu' class='menu collection dropdown-content'>
+        <li class="active"> <a ui-sref="users"><i class="material-icons">list</i> Listar Usuários</a></li>
+        <li><a href="#"><i class="material-icons">restore</i> Histórico de acesso</a></li>
+        <li><a href="#"><i class="material-icons">playlist_add</i> Cadastrar Usuário</a></li>
+        <li><a href="#"><i class="material-icons">mode_edit</i> Editar Cadastro</a></li>
+    </ul>
+
+    <div class="app z-depth-1">
+        <nav>
+            <div class="nav-wrapper">
+
+                <ul class="left">
+                    <li>
+                        <a class='dropdown-button waves-effect waves-light' data-constrainwidth="false" data-alignment="left" href='#' data-activates='menu'><i class="material-icons">menu</i></a>
+                    </li>
+                </ul>
+
+                <a href="#!" class="logo"><i class="material-icons">cloud</i> Controle de Acesso</a>
+
+                <ul class="right">
+                    <li><a class="waves-effect waves-light" href='#'><i class="material-icons">search</i></a></li>
+                    <li><a class="waves-effect waves-light" href='#'><i class="material-icons">view_module</i></a></li>
+                    <li><a class="waves-effect waves-light" href='#'><i class="material-icons">refresh</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div ng-view class="row content">
+
+
+        </div>
+
+    </div>
+
+
+    <script type=" text/javascript " src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+   
+    <script type="text/javascript " src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript " src="public/components/controller/user.js"></script>
+    <script type="text/javascript " src="public/routers.js"></script>
+    <script type="text/javascript " src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
+</body>
+
+</html>

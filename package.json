@@ -1,0 +1,17 @@
+{
+  "name": "accessControl",
+  "version": "1.0.0",
+  "description": "Sistema de controle de acesso para laboratório de pesquisa Instituto Xavier",
+  "main": "app.js",
+  "scripts": {
+   
+  },
+  "author": "valber carneiro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.3",
+    "method-override": "^2.1.2",
+    "body-parser": "^1.5.1"
+  }
+}
